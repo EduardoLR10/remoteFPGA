@@ -15,6 +15,12 @@ def registerPage(request):
             form = CreateUserForm(request.POST)
             if form.is_valid():
                 form.save()
+                username = request.POST.get('username')
+                password1 = request.POST.get('password1')
+
+                user = authenticate(request, username=username, password=password1)
+                login(request, user)   
+                return redirect('queue')
 
         context = {'form':form}
         return render(request, 'account/register.html', context)
