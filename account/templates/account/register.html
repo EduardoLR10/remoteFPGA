@@ -95,7 +95,11 @@
 				   		</div>
 					</form>
 				</div>
-		
+				{% if form.errors %}
+					<div class="d-flex justify-content-center links">	
+						<text style="margin-top: 0.5cm; color: red "> Erro na criação da conta!</text>
+					</div>
+				{% endif %}
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						<text style="color: white">Já possui uma conta?</text> <a href="{% url 'login' %}" class="ml-2">Login</a>

@@ -80,6 +80,7 @@
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form method="POST" action="">
+						{% csrf_token %}
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -99,7 +100,11 @@
 					</form>
 
 				</div>
-		
+				{% for message in messages %}
+					<div class="d-flex justify-content-center links">	
+						<text style="margin-top: 0.5cm; color: red ">{{message}}</text>
+					</div>
+				{% endfor %}
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						<text style="color: white">Não possui uma conta?</text> <a href="{% url 'register' %}" class="ml-2">Cadastrar</a>

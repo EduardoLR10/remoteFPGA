@@ -22,10 +22,12 @@ from upload import views as views_UPLOAD
 from account import views as views_ACCOUNT
 
 urlpatterns = [
-    path('', views_UPLOAD.Home.as_view(), name='home'),
+    path('', views_UPLOAD.queue, name='queue'),
+    path('queue/', views_UPLOAD.queue, name='queue'),
     path('upload/', views_UPLOAD.upload, name='upload'),
     path('register/', views_ACCOUNT.registerPage, name='register'),
     path('login/', views_ACCOUNT.loginPage, name='login'),
+    path('logout/', views_ACCOUNT.logoutUser, name='logout'),
     path('admin/', admin.site.urls),
 ]
 
