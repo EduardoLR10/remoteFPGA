@@ -85,13 +85,13 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="username" placeholder="Username..." class="form-control">
+							<input type="text" name="username" class="form-control">
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-								<input type="password" name="password" placeholder="Password..." class="form-control" >
+								<input type="password" name="password" class="form-control" >
 						</div>
 
 							<div class="d-flex justify-content-center mt-3 login_container">
@@ -121,12 +121,12 @@
 
     //Query All input fields
     var form_fields = document.getElementsByTagName('input')
-    form_fields[0].placeholder='Matrícula';
-    form_fields[1].placeholder='Senha';
+    form_fields[1].placeholder='Matrícula';
+    form_fields[2].placeholder='Senha';
 
 
     for (var field in form_fields){	
-    form_fields[field].className += ' form-control'
+    	form_fields[field].className += ' form-control'
     }
     </script>
 {% endblock %}
