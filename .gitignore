@@ -28,3 +28,6 @@ jupyter_notebooks*
 
 # Media folder
 media/
+
+# Photo file type
+*.jpg
