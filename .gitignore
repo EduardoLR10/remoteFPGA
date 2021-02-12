@@ -1,0 +1,30 @@
+# Virtual environment
+venv_remoteFPGA
+
+# Sensitive data of the project - Django Secret Key
+credentials.py
+
+# Python files
+__pycache__
+.DS_Store
+
+# Default Database of Django
+db.sqlite3
+
+# Emacs files
+#*#
+'#*
+*#'
+'#*#'
+*~
+*.#*
+
+# Pycharm files
+.idea
+
+# Jupyter Notebook files and backup folders
+jupyter_notebooks*
+*.ipynb*
+
+# Media folder
+media/
