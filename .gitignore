@@ -31,3 +31,6 @@ media/
 
 # Photo file type
 *.jpg
+
+# Static folder
+static/
