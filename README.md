@@ -2,8 +2,8 @@
 
 
 ### SPECS
-- Python x.x.x
-- Django x.x
+- Python Python 3.9.1
+- Django 3.1.6
 - Database: Sqlite3
 
 ### DEVELOPMENT SETUP AND RUNNING LOCALLY
@@ -16,6 +16,11 @@
 7. Run the command `python manage.py runserver` to start the flux backend server locally
 8. You can access it from your browser at `localhost:8000`
 
+### REPO ORGANIZATION 
+TODO
 
+
+### AUTOMATED TESTS
+TODO
 
 TODO: Create a `env.py` file inside `upload_exemple` to segregate local and production environments
