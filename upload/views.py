@@ -22,8 +22,14 @@ def upload(request):
         #  the user be using the application?
 
         uploaded_file = request.FILES['document']
-        fs = FileSystemStorage()
-        fs.save(uploaded_file.name, uploaded_file)
-        script.openImage(uploaded_file.name)
 
+        print(uploaded_file.name[-4:]);
+        if uploaded_file.name[-4:] == ".bit":
+            print(uploaded_file.read())
+            fs = FileSystemStorage()
+            fs.save(uploaded_file.name, uploaded_file)
+            #script.openImage(uploaded_file.name)
+
+            script.program_fpga(uploaded_file.name);
+        
     return render(request, 'upload/upload.html')
